@@ -25,3 +25,14 @@ import '@testing-library/cypress/add-commands';
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("setLocalStorage", (key, value) => {
+  cy.window().then((window) => {
+    window.localStorage.setItem(key, value);
+  });
+});
+Cypress.Commands.add("getLocalStorage", (key) => {
+  cy.window().then((window) => {
+    return window.localStorage.getItem(key);
+  });
+});

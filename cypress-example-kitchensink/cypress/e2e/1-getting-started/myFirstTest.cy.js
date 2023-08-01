@@ -66,4 +66,11 @@ context("Actions", () => {
       .check()
       .should("be.checked");
   });
+
+  // Testing custom commands
+
+  it("lets you set & get local storage through custom command", () => {
+    cy.setLocalStorage("token", "abcd123");
+    cy.getLocalStorage("token").should("eq", "abcd123");
+  });
 });
