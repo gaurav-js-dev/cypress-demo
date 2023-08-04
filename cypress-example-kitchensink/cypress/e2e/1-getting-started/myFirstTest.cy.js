@@ -73,4 +73,27 @@ context("Actions", () => {
     cy.setLocalStorage("token", "abcd123");
     cy.getLocalStorage("token").should("eq", "abcd123");
   });
+
+  // Testing mouse commands
+
+  it("should trigger a popover on click", () => {
+    cy.get(".action-btn").click();
+    cy.findAllByText("This popover shows up on click").should("exist");
+  });
+
+  it("should click on different section on canvas", () => {
+    cy.get("#action-canvas").click("top");
+    cy.get("#action-canvas").click("bottomRight");
+    cy.get("#action-canvas").click(80, 100);
+  });
+
+  it("should double click to edit", () => {
+    cy.get(".action-div").dblclick().should("not.be.visible");
+    cy.get(".action-input-hidden").should("be.visible");
+  });
+
+  it("should right click to edit", () => {
+    cy.get(".rightclick-action-div").rightclick().should("not.be.visible");
+    cy.get(".rightclick-action-input-hidden").should("be.visible");
+  });
 });
