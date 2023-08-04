@@ -96,4 +96,9 @@ context("Actions", () => {
     cy.get(".rightclick-action-div").rightclick().should("not.be.visible");
     cy.get(".rightclick-action-input-hidden").should("be.visible");
   });
+
+  it("should show the nav links on hover", () => {
+    cy.getByText(".dropdown-toggle").trigger("mouseover");
+    cy.get(".dropdown-menu").should("be.visible");
+  });
 });

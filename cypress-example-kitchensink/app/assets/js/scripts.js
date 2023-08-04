@@ -207,4 +207,9 @@ $(() => {
     // seconds from the unix epoch
     $div.text(new Date().getTime() / 1000)
   })
+
+  $('.dropdown-toggle').hover(() => {
+    $('li.active').addClass('open')
+  })
+
 })
