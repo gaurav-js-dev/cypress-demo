@@ -1,6 +1,21 @@
-# Kitchen Sink || Cypress Demo App
+# Kitchen Sink | Cypress Demo App
 
-This is an example app used to showcase [Cypress.io](https://www.cypress.io/) testing basics. The application uses most of the API commands in Cypress for demonstration purposes.
+This is an example app used to showcase [Cypress.io](https://www.cypress.io/) testing basics. The application uses most of the API commands in Cypress for demonstration purposes. After cloning the original app tests are added in below file
+
+```
+cypress-example-kitchensink/cypress/e2e/1-getting-started/myFirstTest.cy.js
+```
+
+#### Concepts covered and learned thorough writing tests for this app.
+
+- Basic DOM testing if elements exists, counting and selecting elements.
+- Assertions of UI actions such as typing,clear & check.
+- Routing and navigation mocking and assertions.
+- Handling async operations & data fetching.
+- Mocking network request & using fixture data.
+- Added addon - testing library selector.
+- Cypress configuration for adding custom commands & also adding and using custom javascript/jQuery code.
+- Mouse commands selecting canvas, double clicks, hover etc.
 
 ## Local Setup Instructions
 
