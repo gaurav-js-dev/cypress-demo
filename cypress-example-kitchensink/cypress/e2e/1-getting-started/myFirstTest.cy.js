@@ -67,6 +67,19 @@ context("Actions", () => {
       .should("be.checked");
   });
 
+  // Data fetching example
+
+  it("fetches real data from an external API", () => {
+    // eslint-disable-next-line cypress/no-unnecessary-waiting
+    cy.wait(2000).then(() => {
+      fetch("https://api.spacexdata.com/v3/missions")
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+        });
+    });
+  });
+
   // Testing custom commands
 
   it("lets you set & get local storage through custom command", () => {
@@ -98,7 +111,7 @@ context("Actions", () => {
   });
 
   it("should show the nav links on hover", () => {
-    cy.getByText(".dropdown-toggle").trigger("mouseover");
+    cy.get(".dropdown-toggle").trigger("mouseover");
     cy.get(".dropdown-menu").should("be.visible");
   });
 });
