@@ -1,6 +1,6 @@
 # Cypress Demo Projects
 
-#### This repo contains 2 projects as listed.
+#### This repo contains 2 projects as listed. Each project has own readme file with instructions.
 
 ### 1. [cypress-example-kitchensink](https://github.com/gaurav-js-dev/cypress-demo/tree/master/cypress-example-kitchensink)
 
@@ -22,8 +22,8 @@ cd cypress-demo/cypress-example-kitchensink
 ## install the node_modules
 npm install
 
-## start the local webserver
-npm run start
+## start the local webserver and open Cypress
+npm run local:open
 ```
 
 - For mf-arch-poc
@@ -34,8 +34,11 @@ npm run start
 cd cypress-demo/mf-arch-poc
 
 ## install the node_modules
-npm install
+yarn
 
 ## start the local webserver
-npm run start
+yarn nx serve star-wars --open --devRemotes=starships,planets,films
+
+# launch the cypress test runner
+yarn nx run test-star-wars-test:e2e --watch
 ```
