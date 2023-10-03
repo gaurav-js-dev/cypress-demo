@@ -4,7 +4,7 @@ This repository is a NX monorepo which contains multiple apps under a single rep
 
 ### This project shows E2E tests to test integration points between microfrontends and core functionality following principles of Testing everything together.
 
-- Tests are written in below directory for Star-Wars shell apps which will render multiple sub remote apps.
+- Tests are written in below directory for Star-Wars container shell app which renders multiple sub remote apps as Microfrontend.
 
 ```bash
 mf-arch-poc/apps/test/star-wars-test/src/e2e
