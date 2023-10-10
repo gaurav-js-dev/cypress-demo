@@ -24,7 +24,7 @@ const Starships = () => {
 
   return (
     <div>
-      <h1>Welcome to New Starships!</h1>
+      <h1>Welcome to New Starships!!</h1>
       <DataList
         items={data.map((item) => ({ title: item.name, url: item.url }))}
       />

@@ -8,7 +8,7 @@
 
 ## Local Setup Instructions
 
-In order to run this project in local environment, you'll need to [clone](https://github.com/gaurav-js-dev/cypress-demo/tree/master/cypress-example-kitchensink) it first.
+In order to run this project in your local environment, you'll need to [clone](https://github.com/gaurav-js-dev/cypress-demo/tree/master/cypress-example-kitchensink) it first.
 
 After cloning this repo in your local machine, you have to cd into directory of project you want to run and execute below commands.
 
